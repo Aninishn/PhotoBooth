@@ -32,6 +32,7 @@ To run this project locally:
    ```bash
    git clone https://github.com/Aninishn/PhotoBooth.git
 2. Navigate to the project folder
+   ```bash
    cd PhotoBooth
-3. Open index.html in your browser
+4. Open index.html in your browser
 (No additional setup required)
