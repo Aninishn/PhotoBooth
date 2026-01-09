@@ -1,0 +1,83 @@
+<!-- main.html -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photobooth</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div class="screen start-screen active">
+            <!-- <h1>Let's start the magic 🧸🎀</h1> -->
+            <h1>Let's start the magic 🎄🎅🏻</h1>
+            <!-- <input type="text" class="name-input" id="nameInput" placeholder="Sol,"> -->
+            <input type="text" class="name-input" id="nameInput" placeholder="Christmas,">
+            <button class="start-btn" id="startBtn">
+                <span class="green-dot"></span>
+                start
+            </button>
+        </div>
+
+        <!-- Camera Screen -->
+        <div class="screen camera-screen" id="cameraScreen">
+            <div class="camera-preview">
+                <video id="video" autoplay playsinline></video>
+                <div class="countdown" id="countdown"></div>
+            </div>
+            <div class="camera-controls">
+                <button class="btn" id="captureBtn">Take Photo</button>
+                <button class="btn" id="retakeBtn" style="display:none;">Retake</button>
+                <button class="btn" id="nextBtn" style="display:none;">Next</button>
+            </div>
+            <p style="text-align: center; margin-top: 15px; color: #ff69b4;">
+                <span id="photoCount">0</span> / 4 photos taken
+            </p>
+        </div>
+
+        <!-- Printing Screen -->
+        <div class="screen printing-screen" id="printingScreen">
+            <div class="printing-status">
+                <span class="green-dot"></span>
+                <span>photo is printing</span>
+            </div>
+            <div class="printing-preview">
+                <div class="photo-strip" id="photoStrip">
+                    <div class="photo-slot placeholder">photo here</div>
+                    <div class="photo-slot placeholder">photo here</div>
+                </div>
+                <div class="photo-caption">
+                    <p><span id="names1"></span></p>
+                    <p>Captured Smiles</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Screen -->
+        <div class="screen final-screen" id="finalScreen">
+            <div class="final-photo-strip">
+                <div class="photo-strip" id="finalPhotoStrip"></div>
+                <div class="photo-caption">
+                    <p><span id="names2"></span></p>
+                    <p>Captured Smiles</p>
+                </div>
+            </div>
+            
+            <div class="message-card">
+                <p>you bring the charm, i bring the camera</p>
+                <p class="from">Ani</p>
+            </div>
+
+            <button class="btn" id="downloadBtn">Download Photo</button>
+            <button class="btn" id="restartBtn" style="margin-left: 10px;">Start Over</button>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
